@@ -34,6 +34,7 @@ namespace DummyApp
         }
     }
 
+    // Returns Object of Data Access
     public class DataAccessFactory
     {
         public static ICustomerDataAccess GetDataAccessObject()
