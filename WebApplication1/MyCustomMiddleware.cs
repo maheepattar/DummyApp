@@ -22,6 +22,7 @@ namespace WebApplication1
 
         public async Task InvokeAsync(HttpContext context)
         {
+            var data = context.Request.Headers.ToList();
             await _next(context);
             await context.Response.WriteAsync("Hi From MW");
         }
