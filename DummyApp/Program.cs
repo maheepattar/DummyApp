@@ -13,14 +13,25 @@ namespace DummyApp
         static int temp = 0, steps = 1;
         static void Main(string[] args)
         {
-            Rectangle rectangle = new Rectangle();
-            rectangle.SetWidth(10);
-            rectangle.SetHieght(5);
-            Console.WriteLine("From Rectangle base:- "+ rectangle.GetArea());
 
-           // Rectangle 
-
+            int num = 10;
+            FuncV(num);
+            Console.WriteLine(num + ",");
+            FuncR(ref num);
+            Console.WriteLine(num);
             Console.ReadKey();
+        }
+
+        static void FuncV(int num)
+        {
+            num = num + 10;
+            Console.WriteLine(num+ ",");
+        }
+
+        static void FuncR(ref int num)
+        {
+            num = num + 10;
+            Console.WriteLine(num + ",");
         }
 
         private static void LinqQueris()
